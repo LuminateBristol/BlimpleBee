@@ -364,7 +364,7 @@ class Run:
         if self.i == 0:
             print(round(time.time() * 1000) - self.timenow)
             self.BlimpleBeeControl.motorcontrol("left", 0, pwm)
-            self.BlimpleBeeControl.motorcontrol("right", 0, pwm-round(pwm*0.17))
+            self.BlimpleBeeControl.motorcontrol("right", 0, pwm-round(pwm*0.2))
             print("straight")
 
 
@@ -439,7 +439,7 @@ if __name__ == "__main__":
 
     cameranumber = 1
     RunRobot = Run(BBControl, cameranumber)
-    RunRobot.runwithvision()
+    RunRobot.randommovementtest()
 
 
 
